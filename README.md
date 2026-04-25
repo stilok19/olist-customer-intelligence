@@ -98,7 +98,7 @@ Protecting the top 5.6% of customers is the single highest-ROI retention action.
 | 2 | Repeat Buyers | 2,845 (3%) | R$286 | Loyalty program |
 | 3 | High Value Whales | 2,465 (2.6%) | R$1,173 | VIP treatment |
 
-### Finding 4 — Delivery Experience Drives Churn 🚚
+### Finding 4 — Delivery Experience Drives Churn 
 LightGBM feature importance reveals:
 ```
 Top churn predictors:
@@ -107,16 +107,16 @@ Top churn predictors:
   3. avg_delivery_days       ← slow delivery = churn
 ```
 
-### Finding 5 — Churn Threshold Design Decision ⚙️
+### Finding 5 — Churn Threshold Design Decision 
 ```
 Attempted: Dynamic per-customer purchase cycle threshold
 Problem:   97% of customers have only 1 order — no cycle to calculate
 Solution:  90-day churn threshold (e-commerce industry standard)
 
 Sensitivity analysis:
-  60 days  → 98.3% churn  ❌ too aggressive
+  60 days  → 98.3% churn  too aggressive
   90 days  → 90.1% churn  ← chosen (industry standard)
-  180 days → 71.0% churn  ❌ too lenient
+  180 days → 71.0% churn  too lenient
 ```
 
 ---
@@ -210,7 +210,7 @@ Sensitivity analysis:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 olist-customer-intelligence/
@@ -243,7 +243,7 @@ olist-customer-intelligence/
 
 ---
 
-## 🔄 Data Pipeline
+## Data Pipeline
 
 ### Ingestion
 Raw Olist CSVs are downloaded from Kaggle and uploaded to GCS:
@@ -275,7 +275,7 @@ dbt run --select mart_rfm
 
 ---
 
-## 🤖 Machine Learning
+## Machine Learning
 
 ### Notebook 1 — EDA (`01_eda.ipynb`)
 - Revenue trend analysiห
@@ -353,7 +353,7 @@ Trained separate models per K-Means cluster because:
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Prerequisites
 ```bash
